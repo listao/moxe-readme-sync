@@ -1,7 +1,181 @@
-body {
-    font-family: sans-serif; 
+:root {
+  --white: white;
+  --gray0: #12181b;
+  --gray10: #242e34;
+  --gray15: #303b42;
+  --gray20: #384248;
+  --gray30: #4f5a66;
+  --gray40: #637288;
+  --gray50: #7b889b;
+  --gray60: #939eae;
+  --gray70: #adb4c1;
+  --gray80: #c6cbd3;
+  --gray85: #dcdee2;
+  --gray90: #f0f0f0;
+  --gray100: #f8f8f8;
+  --gray0-rgb: 18, 24, 27;
+  --gray10-rgb: 36, 46, 52;
+  --gray15-rgb: 48, 59, 66;
+  --gray20-rgb: 56, 66, 72;
+  
+  --table-edges: #e5e5e5;
+  --table-head: var(--gray100);
+  --table-head-text: var(--color-text-default);
+  --table-stripe: var(--gray100);
+  --table-text: var(--color-text-default);
+  --table-row: var(--color-bg-page);
+
+  --color-bg-page: var(--white);
+  --color-bg-page-rgb: var(--white-rgb);
+  --color-text-default: var(--gray20);
+  --color-text-muted: var(--gray30);
+  --color-text-minimum: var(--gray40);
+  --color-text-minimum-hover: var(--gray30);
+  --color-text-minimum-icon: rgba(99, 114, 136, 0.6);
+  --color-border-default: rgba(0, 0, 0, 0.1);
+  --color-skeleton: var(--gray90);
+  --color-input-background: var(--white);
+  --color-input-text: var(--gray20);
+  --color-input-border: #e5e5e5;
+  --color-input-border-hover: #ccc;
+  --color-input-border-active: var(--blue);
+  --color-input-border-focus: rgba(17, 140, 253, 0.25);
+  --color-input-placeholder: var(--gray60);
 }
 
-h1 {
-    color: blue;
+body {
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  Segoe UI,
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  Fira Sans,
+  Droid Sans,
+  Helvetica Neue,
+  sans-serif;
+  width: 658px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--color-bg-page);
+  color: var(--color-text-default);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  color: var(--table-text)
+}
+
+table thead {
+  color: var(--table-head-text, inherit)
+}
+
+table thead tr {
+  background: var(--table-head, #f6f8fa)
+}
+
+table tr {
+  background-color: var(--table-row, #fff)
+}
+
+table tr+tr {
+  border-top: 1px solid var(--table-edges, #dfe2e5)
+}
+
+table th,
+table thead td {
+  font-weight: 600
+}
+
+table th:empty,
+table thead td:empty {
+  padding: 0
+}
+
+table td,
+table th {
+  padding: 0;
+  color: inherit;
+  vertical-align: middle;
+  border: 1px solid var(--table-edges, #dfe2e5);
+  padding: 6px 13px
+}
+
+table td>:first-child,
+table td>:only-child,
+table th>:first-child,
+table th>:only-child {
+  margin-top: 0 !important
+}
+
+table td>:last-child,
+table td>:only-child,
+table th>:last-child,
+table th>:only-child {
+  margin-bottom: 0 !important
+}
+
+table:not(.plain) tr:nth-child(2n) {
+  background-color: var(--table-stripe, #fbfcfd)
+}
+
+.rdmd-table {
+  display: block;
+  position: relative
+}
+
+.rdmd-table-inner {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  min-width: 100%;
+  overflow: auto;
+  width: 100%
+}
+
+table {
+  border: 1px solid var(--table-edges, #dfe2e5)
+}
+
+table:only-child {
+  margin: 0 !important
+}
+
+table:only-child thead th {
+  background: inherit
+}
+
+table:only-child td:last-child,
+table:only-child th:last-child {
+  border-right: none
+}
+
+table:only-child thead tr,
+table:only-child thead th:last-child {
+  -webkit-box-shadow: 3px 0 0 var(--table-head);
+  box-shadow: 3px 0 0 var(--table-head)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --table-edges: #3a4348;
+    --table-head: var(--gray15);
+    --table-stripe: var(--gray15);
+    --color-bg-page: var(--gray10);
+    --color-bg-page-rgb: var(--gray10-rgb);
+    --color-text-default: var(--white);
+    --color-text-muted: var(--gray80);
+    --color-text-minimum: var(--gray70);
+    --color-text-minimum-hover: var(--gray80);
+    --color-text-minimum-icon: rgba(173, 180, 193, 0.6);
+    --color-border-default: rgba(255, 255, 255, 0.075);
+  }
 }
