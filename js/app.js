@@ -1,6 +1,6 @@
 (async function() {
   const tbody = document.querySelector('#app > table tbody');
-  const res = await (await fetch('../source.json')).json();
+  const res = await (await fetch('source.json')).json();
   let str = '';
 
   res.forEach((item) => {
