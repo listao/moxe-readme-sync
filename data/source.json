@@ -1,5 +1,9 @@
 [
     {
+        "Value": "SVELTE",
+        "DisplayName": "A new FE framework"
+    },
+    {
         "Value": "LEGO BATMAN",
         "DisplayName": "This is the movie that came out"
     },
