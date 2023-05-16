@@ -1,11 +1,19 @@
 [
     {
-        "Value": "NEW",
-        "DisplayName": "Brand New Value"
+        "Value": "SVELTE",
+        "DisplayName": "A new FE framework"
     },
     {
-        "Value": "TOU",
-        "DisplayName": "Hello World"
+        "Value": "LEGO BATMAN",
+        "DisplayName": "This is the movie that came out"
+    },
+    {
+        "Value": "SUPER MARIO WORLD",
+        "DisplayName": "The Mario game that came bundled with the Super Nintendo Entertainment System"
+    },
+    {
+        "Value": "EARTH DAY",
+        "DisplayName": "Happy Earth Day!"
     },
     {
         "Value": "AARP",
